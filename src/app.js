@@ -22,6 +22,7 @@ app.get('/info', (req, res) => {
     version: process.env.APP_VERSION || '1.0.0',
     env: process.env.NODE_ENV || 'development',
     hostname: os.hostname(),
+    deployed_via: 'github-actions',
   });
 });
 
