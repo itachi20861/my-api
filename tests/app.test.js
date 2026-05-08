@@ -4,7 +4,7 @@ const app = require('../src/app');
 describe('GET /health', () => {
   it('returns status ok and uptime', async () => {
     const res = await request(app).get('/health');
-    expect(res.status).toBe(500); // intentionally wrong to trigger failure
+    expect(res.status).toBe(200);
     expect(res.body.status).toBe('ok');
     expect(typeof res.body.uptime).toBe('number');
   });
